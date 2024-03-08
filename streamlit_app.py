@@ -100,7 +100,7 @@ class Index:
 
 def change_folder(folder):
     with st.spinner("Thinking..."):
-        chroma_directory=f"/{folder}"
+        chroma_directory=f"/Users/user/Desktop/rag_with_documents/{folder}"
         print("Folder name:",folder)
         db = Chroma(collection_name=folder,
                     persist_directory=chroma_directory, 
@@ -151,7 +151,7 @@ with st.sidebar:
                 with st.spinner("Thinking..."):
                     # Check if files are uploaded
                     if uploaded_files is not None:
-                        chroma_directory = f'{folder_path}/'
+                        chroma_directory=f"/Users/user/Desktop/rag_with_documents{folder_path}/"
                         db = Chroma(collection_name=folder_path,
                                     persist_directory=chroma_directory, 
                                     embedding_function=AzureOpenAIEmbeddings(
@@ -190,7 +190,7 @@ with st.sidebar:
         st.rerun()
 
 if "chat_engine" not in st.session_state.keys(): # Initialize the chat engine
-    default_directory=f"/default"
+    default_directory=f"/Users/user/Desktop/rag_with_documents/default"
     db = Chroma(collection_name="default",persist_directory=default_directory, 
                 embedding_function=AzureOpenAIEmbeddings(
                                     deployment = "ada002",
