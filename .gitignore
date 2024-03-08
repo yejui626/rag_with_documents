@@ -3,6 +3,12 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#ipynb files
+*.ipynb
+
+#uploaded_folder
+uploaded_files/
+
 # C extensions
 *.so
 
@@ -120,6 +126,7 @@ ENV/
 env.bak/
 venv.bak/
 langchain/
+.streamlit/
 
 # Spyder project settings
 .spyderproject
